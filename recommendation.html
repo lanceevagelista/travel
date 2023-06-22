@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Destination Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommendation">Destinations</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Explore New Destinations</h1>
+    </header>
+
+    <main>
+        <h2>Recommended Destination</h2>
+        <p>Based on your preferences, we recommend the following travel destination:</p>
+        <div id="destination">
+            <h3 id="destination-name">{{ destination }}</h3>
+            <p id="destination-description">You can check available packages from our Travel Agency partner.</p>
+            <button onclick="window.location.href='https://regenttravelph.com/';">
+                Click Here
+              </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Travel Destination Recommendations</p>
+    </footer>
+</body>
+</html>
