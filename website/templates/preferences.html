@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Lakbay | Preferences</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="static/img/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recommendation">Recommendation</a></li>
+                        <li><a href="/about2">About</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="preferences">
+            <form id="preferences-form" action="/recommendation" method="post">
+                <h2>Select Your Preferences</h2></br>
+    
+                <div class="preference">
+                    <label for="preference1">Duration of your trip:</label>
+                    <select id="preference1" name="preference1">
+                        <option value="1">Overnight</option>
+                        <option value="2">3D 2N</option>
+                        <option value="3">4N or more</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference2">Time of the year:</label>
+                    <select id="preference2" name="preference2">
+                        <option value="1">Summer</option>
+                        <option value="2">Christmas Season</option>
+                        <option value="3">Rainy Season</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference3">Budget:</label>
+                    <select id="preference3" name="preference3">
+                        <option value="1">Php 3000</option>
+                        <option value="2">Php 5000</option>
+                        <option value="3">Php 10000 or more</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference4">Attractions:</label>
+                    <select id="preference4" name="preference4">
+                        <option value="1">Beach</option>
+                        <option value="2">Mountain</option>
+                        <option value="3">City</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference5">Travel Companion:</label>
+                    <select id="preference5" name="preference5">
+                        <option value="1">Alone</option>
+                        <option value="2">With partner</option>
+                        <option value="3">3 or more persons</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference6">Activities:</label>
+                    <select id="preference6" name="preference6">
+                        <option value="1">Water Activities</option>
+                        <option value="2">Hiking</option>
+                        <option value="3">Road trip</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                <div class="preference">
+                    <label for="preference7">Mode of travel:</label>
+                    <select id="preference7" name="preference7">
+                        <option value="1">Water</option>
+                        <option value="2">Air</option>
+                        <option value="3">Land</option>
+                        <option value="4">None</option>
+                        <!-- Add your preference options here -->
+                    </select>
+                </div>
+    
+                </br><input type="submit" value="Get Recommendations">
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

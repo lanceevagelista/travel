@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <!-- <img src="static/img/logo.png" class="logo"> -->
+                <nav>
+                    <ul>
+                        <li><a href="/index">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome, Admin!</h1>
+            <h2>Edit Content</h2></br>
+            <ul>
+                <li><a href="/admin/edit/palawan">Edit Palawan Page</a></li>
+                <br>
+                <br>
+                <li><a href="/admin/edit/launion">Edit La Union Page</a></li>
+                <br>
+                <br>
+                <li><a href="/admin/edit/cebu">Edit Cebu Page</a></li>
+                <br>
+                <br>
+                <li><a href="/admin/edit/baguio">Edit Baguio Page</a></li>
+                <br>
+                <br>
+                <li><a href="/admin/edit/rizal">Edit Rizal Page</a></li>
+
+                <!-- Add more editing options for other pages as needed -->
+            </ul>
+        </div>
+    </body>
+</html>

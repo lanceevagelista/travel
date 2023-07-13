@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Rizal</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="static/img/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recommendation">Recommendation</a></li>
+                        <li><a href="/about2">About</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div style="font-size: 25px; color: white;">
+                <h1>Rizal</h1>
+                <p>Rizal also known as the Cradle of Philippine Art, is a mountainous province that sits to the east of the Philippines' capital, Manila.</p></br>
+            </div>
+
+            <div style="font-size: 15px; color: white;" class="center">
+                <img src="static/img/daranak.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">Daranak Day Tour Package</h2>
+                <p>Day Tour Package</p>
+                <p>Php 1999/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Free entrance fee;</p>
+                <p>- Free breakfast;</p>
+                <p>- Cottage for 2-3 pax;</p>
+                <p>- Pick up from Tanay Public Market</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+                <img src="static/img/daraitan.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">Mt Daraitan Hiking Package</h2>
+                <p>Overnight Tour Package</p>
+                <p>Php 2499/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Side trip to Tinipak River;</p>
+                <p>- Free breakfast;</p>
+                <p>- Free use of comfort room and shower area;</p>
+                <p>- Free rent of trekking equipment ();</p>
+                <p>- Pictures on the summit and Love nest;</p>
+                <p>- Cottage or tent for 2-3 pax</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+                <img src="static/img/treasure.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">Treasure Mountain Tour</h2>
+                <p>Overnight Tour Package</p>
+                <p>Php 2999/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Free breakfast;</p>
+                <p>- Free use of comfort room and shower area;</p>
+                <p>- Free rent of tents (2-3 pax) ();</p>
+                <p>- Pictures on the summit;</p>
+                <p>- Obstacle course;</p>
+                <p>- 15-minute ATV ride;</p>
+                <p>- Roundtrip van transportation</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+            </div>
+
+            
+        </div>
+    </body>
+</html>

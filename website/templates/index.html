@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Welcome Traveler</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="mySlides">
+        <img src="/static/img/bg.png" class="background1" style="width:100%; height:100%;">
+    </div>
+
+    <div class="mySlides">
+        <img src="/static/img/bg2.jpg" class="background2" style="width:100%; height:100%;">
+    </div>
+
+    <div class="mySlides">
+        <img src="/static/img/bg3.jpg" class="background3" style="width:100%; height:100%;">
+    </div>
+
+    <div class="content">
+        <h1>Lakbay TIPS: A Travel Recommender System</h1>
+        <p>Recommend users different tourist destinations</p>
+        <button id="start" onclick="location.href='/login'"><span></span>Travel Now</button>
+        <br>
+        <button id="admin" onclick="location.href='/admin'"><span></span>Admin</button>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 7 seconds
+        }
+    </script>
+</body>
+</html>

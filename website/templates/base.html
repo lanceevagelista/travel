@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .main-content {
+      margin-top: 50px;
+    }
+
+    .container3 {
+      margin-top: 7px;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #ffffff;
+      border: none;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-header h3 {
+      margin-bottom: 0;
+    }
+
+    .card-body {
+      padding: 30px;
+      background-color: #ffffff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control-label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .form-control:focus {
+      border-color: #888888;
+      box-shadow: none;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #4e6ef5;
+      border: none;
+      color: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #3048c3;
+    }
+
+    footer.footer {
+      margin-top: 50px;
+      background-color: #f8f9fc;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .footer a {
+      color: #888888;
+      text-decoration: none;
+    }
+  </style>
+<script>
+  function saveChanges() {
+    // Retrieve form data
+    var nickname = document.getElementById('input-nickname').value;
+    var phoneNumber = document.getElementById('input-email').value;
+    var address = document.getElementById('input-address').value;
+    var city = document.getElementById('input-city').value;
+    var postalCode = document.getElementById('input-postal-code').value;
+
+    // Perform input validation
+    if (nickname === '' || phoneNumber === '' || address === '' || city === '' || postalCode === '') {
+      // Display an alert for missing fields
+      alert('Please input your information in all fields.');
+      return; // Stop further execution
+    }
+
+    // Store user information in localStorage
+    var userInfo = {
+      nickname: nickname,
+      phoneNumber: phoneNumber,
+      address: address,
+      city: city,
+      postalCode: postalCode
+    };
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+    // Redirect to the profile page
+    window.location.href = '/profile';
+  }
+</script>
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="container3 mt-7">
+      <!-- Table -->
+      <h2 class="mb-5">My Account Card</h2>
+      <div class="row">
+        <div class="col-xl-8 m-auto order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">My Account</h3>
+                </div>
+                <div class="col-4 text-right">
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <h6 class="heading-small text-muted mb-4">User Information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-nickname">Nickname</label>
+                        <input type="text" id="input-nickname" class="form-control form-control-alternative">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Phone Number</label>
+                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="(+63)">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact Information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Postal Code</label>
+                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal Code">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button class="btn" type="button" onclick="saveChanges()">Save Changes</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-xl-6 m-auto text-center">
+        &copy; 2023 My Website. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

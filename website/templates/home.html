@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Welcome Traveler</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="static/img/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recommendation">Recommendation</a></li>
+                        <li><a href="/about2">About</a></li>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="home">
+                <h1>Hello Dear Traveler!</h1>
+                <p>Thank you for using our service. You can now access the system features.</p>
+            </div>
+            <div class="wrapper-body">
+            <div class="wrapper">
+                <div class="card"><img src="static/img/img-palawan.jpg"/>
+                  <div class="info">
+                    <h1>Palawan</h1>
+                    <p>Palawan: the place where memories are made</p></br>
+                    <button><a href="/palawan" >Read More</a></button>
+                  </div>
+
+                </div>
+                <div class="card"><img src="static/img/img-lu.jpg"/>
+                  <div class="info">
+                    <h1>La Union</h1>
+                    <p>Exploring with you, La Union</p></br>
+                    <button><a href="/launion" >Read More</a></button>
+                  </div>
+                </div>
+
+                <div class="card"><img src="static/img/img-cebu.jpg"/>
+                  <div class="info">
+                    <h1>Cebu</h1>
+                    <p>Take me again in Cebu</p></br>
+                    <button><a href="/cebu" >Read More</a></button>
+                  </div>
+                </div>
+
+                <div class="card"><img src="static/img/img-baguio.jpg"/>
+                    <div class="info">
+                      <h1>Baguio</h1>
+                      <p>I left my heart in Baguio...</p></br>
+                      <button><a href="/baguio" >Read More</a></button>
+                    </div>
+                  </div>
+
+                  <div class="card"><img src="static/img/img-rizal.jpg"/>
+                    <div class="info">
+                      <h1>Rizal</h1>
+                      <p>Chasing Waterfalls in Rizal</p></br>
+                      <button><a href="/rizal" >Read More</a></button>
+                    </div>
+                  </div>
+            </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Welcome Traveler</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="static/img/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recommendation">Recommendation</a></li>
+                        <li><a href="/about2">About</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="results">
+                <h1>Recommended Destination</h1>
+                <p>Based on your preferences, we recommend the following travel destination:</p></br>
+            </div>
+
+            <div class="results-data">
+                <div id="destination">
+                    <h1 id="destination-name" style="text-align: center; font-size: 70px;">{{ destination }}</h1>
+                    <p id="destination-description">You can check available packages and start booking.</p>
+                    <br>
+                    <button onclick="redirectDestination('{{ destination }}');" id="destinationbtn">See Details</button>
+                </div>
+            </div>
+            </div>
+            <script>
+                function redirectDestination(destination) {
+                    window.location.href = "/destinationbtn/" + destination;
+                }
+            </script>
+    </body>
+</html>

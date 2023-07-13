@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Admin | Login</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="static/img/logo.png" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="/index">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="/admin">
+        <h1>ADMIN LOGIN</h1></br>
+        <input type="text" name="username" placeholder="Username" required><br>
+        <br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    </div>
+</body>
+</html>

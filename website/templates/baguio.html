@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Baguio</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="static/img/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/recommendation">Recommendation</a></li>
+                        <li><a href="/about2">About</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div style="font-size: 25px; color: white;">
+                <h1>Baguio</h1>
+                <p>Hailed as the Summer Capital of the Philippines, Baguio is the top destination to go to if you want to take a break from the tropical heat in the lowlands.</p></br>
+            </div>
+
+            <div style="font-size: 15px; color: white;" class="center">
+                <img src="static/img/burnham.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">Venus Parkview Hotel</h2>
+                <p>3D2N Classic Vacation</p>
+                <p>Php 2499/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Day tour of famous attractions in Baguio;</p>
+                <p>- Use of resort facilities;</p>
+                <p>- 24/7 customer support</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+                <img src="static/img/trinidad.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">Azalea Residences Baguio</h2>
+                <p>4D3N Baguio Package</p>
+                <p>Php 3499/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Day tour of famous attractions in Baguio;</p>
+                <p>- Strawberry farm tour and picking;</p>
+                <p>- Daily breakfast;</p>
+                <p>- Use of resort facilities;</p>
+                <p>- 24/7 customer support</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+                <img src="static/img/mines.png" style="width: 1100px;height: 600px;" class="center">
+                <br>
+                <h2 style="font-size: 20;">The Manor at Camp John Hay</h2>
+                <p>4D3N Camp John Hay Tour Package</p>
+                <p>Php 4999/pax</p>
+                <br>
+                <p>Inclusions:</p>
+                <p>- Tour guide;</p>
+                <p>- Day tour of famous attractions in Baguio;</p>
+                <p>- Airport, bus/train station pick up & drop off;</p>
+                <p>- Day time cottage at the Mines View Park;</p>
+                <p>- Strawberry farm tour and picking;</p>
+                <p>- Daily breakfast and lunch;</p>
+                <p>- Use of resort facilities;</p>
+                <p>- 24/7 customer support</p>
+                <br>
+                <button id="book" onclick="location.href='/book'"><span></span>Book Now</button>
+                <br>
+                <br>
+            </div>
+
+            
+        </div>
+    </body>
+</html>
